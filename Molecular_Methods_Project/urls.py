@@ -3,6 +3,7 @@ from django.conf.urls import patterns, include, url
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
+from django.views.generic import RedirectView
 
 #Add any extra urls to applications or maybe log-in screen
 urlpatterns = patterns('',
@@ -18,4 +19,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     url(r'^desktop/', include('desktop.urls', namespace='desktop')),
+    url(r'', include('desktop.urls', namespace='desktop')),
 )
