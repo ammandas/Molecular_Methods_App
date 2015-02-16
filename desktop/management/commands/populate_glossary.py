@@ -4,7 +4,6 @@ from django.core.management.base import BaseCommand
 
 import desktop.models
 
-
 class Command(BaseCommand):
 
     args = 'No arguments'
@@ -13,7 +12,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
-        tree = xml.etree.ElementTree.parse('Glossary.xml')
+        tree = xml.etree.ElementTree.parse('xml files/Glossary.xml')
 
         root = tree.getroot()
 
